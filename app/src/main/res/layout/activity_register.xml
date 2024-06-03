@@ -6,13 +6,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bgsign"
-    tools:context="ui.MainActivity">
+    tools:context="ui.RegisterActivity">
+
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sign In"
+        android:text="Sign Up"
         android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,11 +29,45 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:background="@drawable/round_corner"
+        android:hint="Username"
+        android:inputType="text"
+        android:padding="18dp"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="104dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/round_corner"
         android:hint="Email"
         android:inputType="text"
         android:padding="18dp"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="184dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/round_corner"
+        android:hint="Password"
+        android:inputType="text"
+        android:padding="18dp"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -44,11 +79,12 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:background="@drawable/round_corner"
-        android:hint="Password"
+        android:hint="Confirm Password"
         android:inputType="text"
         android:padding="18dp"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText" />
 
@@ -57,37 +93,28 @@
         android:layout_width="308dp"
         android:layout_height="69dp"
         android:layout_marginStart="52dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="52dp"
         android:background="@drawable/bgbtn"
-        android:text="Sign In"
+        android:text="Sign Up"
         android:textColorLink="#4206EC"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText2" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Or Sign In With"
-        android:textSize="15dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp"
         android:gravity="center"
-        tools:layout_editor_absoluteX="117dp"
-        tools:layout_editor_absoluteY="562dp"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Don't Have Account? Sign Up"
+        android:text="Already Have Account? Sign In"
         android:textSize="15dp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="695dp"
-        tools:ignore="MissingConstraints" />
-
-
-
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
