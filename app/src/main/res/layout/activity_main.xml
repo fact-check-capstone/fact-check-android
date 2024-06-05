@@ -21,7 +21,7 @@
         app:layout_constraintVertical_bias="0.289" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/inEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -37,7 +37,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/inPass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -50,10 +50,10 @@
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/inEmail" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnLogin"
         android:layout_width="308dp"
         android:layout_height="69dp"
         android:layout_marginStart="52dp"
@@ -65,29 +65,43 @@
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        app:layout_constraintTop_toBottomOf="@+id/inPass" />
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:layout_width="167dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
         android:text="Or Sign In With"
         android:textSize="15dp"
-        android:gravity="center"
-        tools:layout_editor_absoluteX="117dp"
-        tools:layout_editor_absoluteY="562dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin"
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="240dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="50dp"
         android:gravity="center"
         android:text="Don't Have Account? Sign Up"
         android:textSize="15dp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="695dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signInWithGoogle"
         tools:ignore="MissingConstraints" />
 
-
+    <ImageButton
+        android:id="@+id/signInWithGoogle"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:srcCompat="@drawable/icons_google"
+        tools:ignore="MissingConstraints" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
