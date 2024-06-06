@@ -44,7 +44,7 @@
         android:layout_marginEnd="20dp"
         android:background="@drawable/round_corner"
         android:hint="Password"
-        android:inputType="text"
+        android:inputType="textPassword"
         android:padding="18dp"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -100,6 +100,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView2"
         app:srcCompat="@drawable/icons_google"
         tools:ignore="MissingConstraints" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -21,18 +21,19 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/inUsername"
+        android:id="@+id/inName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="36dp"
         android:layout_marginEnd="20dp"
         android:background="@drawable/round_corner"
-        android:hint="Username"
+        android:hint="Name"
         android:inputType="text"
         android:padding="18dp"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -51,7 +52,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inUsername" />
+        app:layout_constraintTop_toBottomOf="@+id/inName" />
 
     <EditText
         android:id="@+id/inPass"
@@ -62,30 +63,13 @@
         android:layout_marginEnd="20dp"
         android:background="@drawable/round_corner"
         android:hint="Password"
-        android:inputType="text"
+        android:inputType="textPassword"
         android:padding="18dp"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inEmail" />
-
-    <EditText
-        android:id="@+id/inPassConfirm"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:background="@drawable/round_corner"
-        android:hint="Confirm Password"
-        android:inputType="text"
-        android:padding="18dp"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inPass" />
 
     <Button
         android:id="@+id/btnSignUp"
@@ -100,7 +84,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inPassConfirm" />
+        app:layout_constraintTop_toBottomOf="@+id/inPass" />
 
     <TextView
         android:layout_width="match_parent"

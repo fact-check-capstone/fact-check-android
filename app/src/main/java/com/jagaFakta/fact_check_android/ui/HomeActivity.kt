@@ -24,14 +24,26 @@ class HomeActivity : AppCompatActivity() {
         // initiate firebase
         auth = Firebase.auth
 
-        btnLogout(auth)
+        setUserInfo()
+        btnLogout()
     }
 
-    private fun btnLogout(auth: FirebaseAuth){
+    private fun btnLogout(){
         binging.btnLogout.setOnClickListener {
             auth.signOut()
             startActivity(Intent(this, MainActivity::class.java))
             finish()
+        }
+    }
+    private fun setUserInfo(){
+        val user = auth.currentUser
+        user?.let {
+            // Name, email address, and profile photo Url
+            val name = it.displayName
+            val email = it.email
+
+            binging.lbEmail.text = email
+            binging.lbName.text = name
         }
     }
 }

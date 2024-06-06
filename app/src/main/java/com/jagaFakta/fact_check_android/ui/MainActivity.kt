@@ -17,6 +17,7 @@ import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.auth.auth
 import com.jagaFakta.fact_check_android.R
 import com.jagaFakta.fact_check_android.databinding.ActivityMainBinding
+import kotlin.math.log
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
@@ -26,6 +27,19 @@ class MainActivity : AppCompatActivity() {
     companion object{
         private const val RC_SIGN_IN = 1
     }
+
+    override fun onStart() {
+        super.onStart()
+        // Check if user is signed in (non-null) and update UI accordingly.
+        val currentUser = auth.currentUser
+        Log.d(TAG, "onStart: $currentUser")
+        if (currentUser != null){
+            startActivity(Intent(this,HomeActivity::class.java))
+            finish()
+        }
+    }
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -51,6 +65,12 @@ class MainActivity : AppCompatActivity() {
         binding.signInWithGoogle.setOnClickListener {
             val signInIntent = googleSignIntClient.signInIntent
             startActivityForResult(signInIntent, RC_SIGN_IN)
+        }
+        binding.btnLogin.setOnClickListener {
+            val eml = binding.inEmail.text.toString()
+            val pas = binding.inPass.text.toString()
+
+            loginEmailPass(eml,pas)
         }
     }
 
@@ -82,6 +102,18 @@ class MainActivity : AppCompatActivity() {
                     Log.w(TAG, "signInWithEmail:failure", task.exception)
                     Toast.makeText(baseContext, "Authentication failed.", Toast.LENGTH_SHORT).show()
                 }
+            }
+    }
+
+    private fun loginEmailPass(email:String, password:String){
+        auth.signInWithEmailAndPassword(email, password)
+            .addOnSuccessListener(this) {
+                Log.d(TAG, "loginWithEmail:success")
+                startActivity(Intent(this,HomeActivity::class.java))
+                finish()
+            }
+            .addOnFailureListener { error ->
+                Log.d(TAG, "loginEmailPass failure: ${error.message}")
             }
     }
 }

@@ -8,18 +8,32 @@
     tools:context=".ui.HomeActivity">
 
     <TextView
-        android:id="@+id/textView3"
-        android:layout_width="240dp"
-        android:layout_height="53dp"
-        android:text="home"
-        tools:layout_editor_absoluteX="80dp"
-        tools:layout_editor_absoluteY="344dp" />
+        android:id="@+id/lbName"
+        android:layout_width="wrap_content"
+        android:layout_height="28dp"
+        android:layout_marginTop="20dp"
+        android:text="name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbEmail" />
 
     <Button
         android:id="@+id/btnLogout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
         android:text="logout"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="467dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbName" />
+
+    <TextView
+        android:id="@+id/lbEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="28dp"
+        android:layout_marginTop="52dp"
+        android:text="email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
