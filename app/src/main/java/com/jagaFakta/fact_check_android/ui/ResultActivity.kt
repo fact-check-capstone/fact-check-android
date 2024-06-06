@@ -1,4 +1,4 @@
-package ui
+package com.jagaFakta.fact_check_android.ui
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
