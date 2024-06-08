@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "896060293940",
+    "project_id": "fact-check-android",
+    "storage_bucket": "fact-check-android.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:896060293940:android:68a4095a8b942af9039b61",
+        "android_client_info": {
+          "package_name": "com.jagaFakta.fact_check_android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "896060293940-cllfr0h3oc4nbm3damdojoj8q5rkpq5r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jagaFakta.fact_check_android",
+            "certificate_hash": "4a7776085c52c1a9a1b756132274f742afd67e05"
+          }
+        },
+        {
+          "client_id": "896060293940-bt2jg5knq1bipvkufnpq03u64bjok314.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAuCpPPJ56XuuaZfY-tWVoq2hHZqTdw7AY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "896060293940-bt2jg5knq1bipvkufnpq03u64bjok314.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

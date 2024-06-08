@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">fact-check-android</string>
+    <string name="app_name">Jaga Fakta</string>
+    <string name="default_web_client_id">896060293940-bt2jg5knq1bipvkufnpq03u64bjok314.apps.googleusercontent.com</string>
 </resources>
