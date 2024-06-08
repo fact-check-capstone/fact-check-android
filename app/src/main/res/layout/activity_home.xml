@@ -7,33 +7,51 @@
     android:layout_height="match_parent"
     tools:context=".ui.HomeActivity">
 
-    <TextView
-        android:id="@+id/lbName"
-        android:layout_width="wrap_content"
-        android:layout_height="28dp"
-        android:layout_marginTop="20dp"
-        android:text="name"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lbEmail" />
 
     <Button
         android:id="@+id/btnLogout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
         android:text="logout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lbName" />
+        tools:layout_editor_absoluteY="636dp" />
+
 
     <TextView
-        android:id="@+id/lbEmail"
+        android:id="@+id/lbHome"
         android:layout_width="wrap_content"
         android:layout_height="28dp"
-        android:layout_marginTop="52dp"
-        android:text="email"
+        android:layout_marginTop="16dp"
+        android:text="Home"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/text_area"
+        android:layout_width="277dp"
+        android:layout_height="224dp"
+        android:layout_marginTop="208dp"
+        android:background="@drawable/round_corner"
+        android:gravity="top|left"
+        android:hint="Deskripsi"
+        android:inputType="text|textMultiLine"
+        android:padding="10dp"
+        android:textSize="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbHome"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:layout_width="182dp"
+        android:layout_height="57dp"
+        android:text="Scan"
+        tools:layout_editor_absoluteX="114dp"
+        tools:layout_editor_absoluteY="514dp" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,17 +5,88 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="ui.ProfileActivity">
+    tools:context=".ui.ProfileActivity">
 
 
-    <EditText
+    <ImageView
+        android:id="@+id/bgup"
+        android:layout_width="411dp"
+        android:layout_height="805dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/bgup"
+        tools:layout_editor_absoluteY="-319dp" />
+
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:text="Profile"
+        android:textColor="#ffffff"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:layout_width="337dp"
+        android:layout_height="62dp"
+        android:gravity="center"
+        android:padding=""
+        android:text="Ahmad Jamal"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="262dp" />
+
+    <ImageButton
+        android:id="@+id/back"
+        android:layout_width="43dp"
+        android:layout_height="37dp"
+        android:background="none"
+        app:srcCompat="@drawable/back"
+        tools:layout_editor_absoluteX="7dp"
+        tools:layout_editor_absoluteY="6dp" />
+
+    <ImageView
+        android:id="@+id/Profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/profile"
+        tools:layout_editor_absoluteX="105dp"
+        tools:layout_editor_absoluteY="109dp" />
+
+
+    <TextView
+        android:layout_width="321dp"
+        android:layout_height="47dp"
         android:background="@drawable/round_corner"
-        android:hint="Username"
-        android:padding="18dp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="308dp" />
+        android:gravity="center"
+        android:text="jamalahmadi567@gmail.com"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="45dp"
+        tools:layout_editor_absoluteY="387dp" />
+
+    <TextView
+        android:layout_width="321dp"
+        android:layout_height="47dp"
+        android:background="@drawable/round_corner"
+        android:gravity="center"
+        android:text="jamalahmadi567@gmail.com"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="45dp"
+        tools:layout_editor_absoluteY="464dp" />
+
+    <Button
+        android:id="@+id/editprofile"
+        android:layout_width="218dp"
+        android:layout_height="75dp"
+        android:text="Edit Profile"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="593dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
