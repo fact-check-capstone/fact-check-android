@@ -8,6 +8,10 @@
     android:background="@drawable/bgsign"
     tools:context="ui.MainActivity">
 
+
+
+
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -89,5 +93,6 @@
 
 
 
+>>>>>>> af54dc7 (buat login register)
 
 </androidx.constraintlayout.widget.ConstraintLayout>
