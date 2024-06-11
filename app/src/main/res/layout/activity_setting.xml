@@ -25,7 +25,8 @@
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/back"
         tools:layout_editor_absoluteX="7dp"
-        tools:layout_editor_absoluteY="6dp" />
+        tools:layout_editor_absoluteY="6dp"
+        tools:ignore="MissingConstraints" />
 
 
     <TextView
@@ -36,15 +37,17 @@
         android:text="Profile"
         android:textSize="20dp"
         tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="124dp" />
+        tools:layout_editor_absoluteY="124dp"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imageView"
         android:layout_width="57dp"
         android:layout_height="52dp"
         app:srcCompat="@drawable/user"
         tools:layout_editor_absoluteX="55dp"
-        tools:layout_editor_absoluteY="131dp" />
+        tools:layout_editor_absoluteY="131dp"
+        tools:ignore="MissingConstraints" />
 
 
     <TextView
@@ -55,15 +58,17 @@
         android:text="About"
         android:textSize="20dp"
         tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="211dp" />
+        tools:layout_editor_absoluteY="211dp"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imageView1"
         android:layout_width="57dp"
         android:layout_height="52dp"
         app:srcCompat="@drawable/info"
         tools:layout_editor_absoluteX="55dp"
-        tools:layout_editor_absoluteY="219dp" />
+        tools:layout_editor_absoluteY="219dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:layout_width="350dp"
@@ -73,15 +78,17 @@
         android:text="Dark Mode"
         android:textSize="20dp"
         tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="304dp" />
+        tools:layout_editor_absoluteY="304dp"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imageVie2"
         android:layout_width="57dp"
         android:layout_height="52dp"
         app:srcCompat="@drawable/night_mode"
         tools:layout_editor_absoluteX="55dp"
-        tools:layout_editor_absoluteY="312dp" />
+        tools:layout_editor_absoluteY="312dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:layout_width="350dp"
@@ -91,15 +98,17 @@
         android:text="Logout"
         android:textSize="20dp"
         tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="394dp" />
+        tools:layout_editor_absoluteY="394dp"
+        tools:ignore="MissingConstraints" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imageVew2"
         android:layout_width="57dp"
         android:layout_height="52dp"
         app:srcCompat="@drawable/logout"
         tools:layout_editor_absoluteX="55dp"
-        tools:layout_editor_absoluteY="401dp" />
+        tools:layout_editor_absoluteY="401dp"
+        tools:ignore="MissingConstraints" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

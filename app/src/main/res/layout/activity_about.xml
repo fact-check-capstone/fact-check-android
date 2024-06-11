@@ -7,16 +7,6 @@
     android:layout_height="match_parent"
     tools:context=".ui.AboutActivity">
 
-    <ImageButton
-        android:id="@+id/back"
-        android:layout_width="43dp"
-        android:layout_height="37dp"
-        android:background="none"
-        app:srcCompat="@drawable/back"
-        tools:layout_editor_absoluteX="7dp"
-        tools:layout_editor_absoluteY="6dp" />
-
-
     <EditText
         android:id="@+id/text_area"
         android:layout_width="267dp"
@@ -27,6 +17,7 @@
         android:padding="10dp"
         android:textSize="10dp"
         tools:layout_editor_absoluteX="72dp"
-        tools:layout_editor_absoluteY="332dp" />
+        tools:layout_editor_absoluteY="332dp"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -106,6 +106,4 @@
         tools:ignore="MissingConstraints" />
 
 
->>>>>>> af54dc7 (buat login register)
-
 </androidx.constraintlayout.widget.ConstraintLayout>
