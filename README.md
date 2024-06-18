@@ -1,3 +1,5 @@
+# This app is our project capstone 
+This application is an app that can help you check hoax news.
 # How to download app?
 - klick releases last version in right this repository
 - klick sourcode zip
