@@ -5,13 +5,19 @@ import com.google.gson.annotations.SerializedName
 data class PredictHistoryResponse(
 
 	@field:SerializedName("data")
-	val data: List<History>
+	val data: List<History>,
+
+	@field:SerializedName("message")
+	val message: String? = null
 )
 
 data class History(
 
 	@field:SerializedName("result")
-	val prediction: String? = null,
+	val result: String? = null,
+
+	@field:SerializedName("id")
+	val id: String? = null,
 
 	@field:SerializedName("text")
 	val text: String? = null,
@@ -19,4 +25,6 @@ data class History(
 	@field:SerializedName("userId")
 	val userId: String? = null,
 
+	@field:SerializedName("createdAt")
+	val createdAt: String,
 )

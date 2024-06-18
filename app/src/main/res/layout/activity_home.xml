@@ -5,120 +5,63 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.HomeActivity">
+    android:background="@drawable/bgup"
+    tools:context=".ui.predict.HomeActivity">
 
 
-    <EditText
-        android:id="@+id/textScan"
-        android:layout_width="266dp"
-        android:layout_height="309dp"
-        android:layout_marginTop="120dp"
-        android:background="@drawable/round_corner"
-        android:gravity="top|left"
-        android:hint="masukkan berita hoax yang ingin anda cheking"
-        android:inputType="text|textMultiLine"
-        android:padding="10dp"
-        android:textSize="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
-        tools:ignore="MissingConstraints" />
-
-    <Button
-        android:id="@+id/btnScan"
-        android:layout_width="182dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="48dp"
-        android:text="Checking"
-        app:layout_constraintEnd_toEndOf="@+id/textScan"
-        app:layout_constraintStart_toStartOf="@+id/textScan"
-        app:layout_constraintTop_toBottomOf="@+id/textScan"
-        tools:ignore="MissingConstraints" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
-        android:layout_width="413dp"
-        android:layout_height="61dp"
-        android:background="#6750A3"
+        android:layout_width="match_parent"
+        android:layout_height="720dp"
+        android:layout_marginTop="194dp"
+        android:background="@drawable/background_history"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/lbName"
-            android:layout_width="wrap_content"
-            android:layout_height="28dp"
-            android:layout_marginStart="52dp"
-            android:text="Hello Name"
-            android:textColor="@color/white"
-            android:textSize="20dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+        <EditText
+            android:id="@+id/textScan"
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/round_corner"
+            android:gravity="top|left"
+            android:hint="input your news to checking hoax"
+            android:inputType="text|textMultiLine"
+            android:padding="10dp"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.484" />
-
-        <ImageButton
-            android:id="@+id/btnLogout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="52dp"
-            android:background="#6750A2"
-            app:layout_constraintBottom_toBottomOf="@+id/lbName"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/lbName"
-            app:layout_constraintVertical_bias="0.25"
-            app:srcCompat="@drawable/icon_logout"
-            tools:ignore="MissingConstraints" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="311dp"
-        android:layout_height="86dp"
-        android:layout_marginBottom="15dp"
-        android:background="@drawable/corner_nav_bottom"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <ImageButton
-            android:id="@+id/btnRiwayat"
-            android:layout_width="101dp"
-            android:layout_height="84dp"
-            android:background="#00000000"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.4"
-            app:srcCompat="@drawable/icon_profile"
             tools:ignore="MissingConstraints" />
 
-        <ImageButton
-            android:id="@+id/btnHome"
-            android:layout_width="107dp"
-            android:layout_height="88dp"
-            android:background="#00000000"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/icon_home"
+        <Button
+            android:id="@+id/btnScan"
+            android:layout_width="300dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="40dp"
+            android:text="Checking"
+            app:layout_constraintEnd_toEndOf="@+id/textScan"
+            app:layout_constraintStart_toStartOf="@+id/textScan"
+            app:layout_constraintTop_toBottomOf="@+id/textScan"
             tools:ignore="MissingConstraints" />
-
-        <ImageButton
-            android:id="@+id/btnProfile"
-            android:layout_width="102dp"
-            android:layout_height="86dp"
-            android:layout_marginStart="1dp"
-            android:background="#00000000"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/btnRiwayat"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/btnHome"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
-            app:srcCompat="@drawable/search_icon" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:text="JAGA FAKTA"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

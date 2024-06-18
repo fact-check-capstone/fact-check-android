@@ -1,4 +1,4 @@
-package com.jagaFakta.fact_check_android.ui
+package com.jagaFakta.fact_check_android.ui.login
 
 import android.content.ContentValues.TAG
 import android.content.Intent
@@ -12,12 +12,13 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.common.api.ApiException
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.GoogleAuthCredential
 import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.auth.auth
 import com.jagaFakta.fact_check_android.R
 import com.jagaFakta.fact_check_android.databinding.ActivityMainBinding
-import kotlin.math.log
+import com.jagaFakta.fact_check_android.ui.historyPredict.HistoryActivity
+import com.jagaFakta.fact_check_android.ui.predict.HomeActivity
+import com.jagaFakta.fact_check_android.ui.regis.RegisterActivity
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
@@ -34,7 +35,7 @@ class MainActivity : AppCompatActivity() {
         val currentUser = auth.currentUser
         Log.d(TAG, "onStart: $currentUser")
         if (currentUser != null){
-            startActivity(Intent(this,HomeActivity::class.java))
+            startActivity(Intent(this, HistoryActivity::class.java))
             finish()
         }
     }
@@ -95,7 +96,7 @@ class MainActivity : AppCompatActivity() {
                 if (task.isSuccessful) {
                     // Sign in success, update UI with the signed-in user's information
                     Log.d(TAG, "signInWithEmail:success")
-                    startActivity(Intent(this,HomeActivity::class.java))
+                    startActivity(Intent(this, HistoryActivity::class.java))
                     finish()
                 } else {
                     // If sign in fails, display a message to the user.
@@ -109,7 +110,7 @@ class MainActivity : AppCompatActivity() {
         auth.signInWithEmailAndPassword(email, password)
             .addOnSuccessListener(this) {
                 Log.d(TAG, "loginWithEmail:success")
-                startActivity(Intent(this,HomeActivity::class.java))
+                startActivity(Intent(this, HistoryActivity::class.java))
                 finish()
             }
             .addOnFailureListener { error ->

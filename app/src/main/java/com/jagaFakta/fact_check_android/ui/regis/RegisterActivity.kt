@@ -1,19 +1,15 @@
-package com.jagaFakta.fact_check_android.ui
+package com.jagaFakta.fact_check_android.ui.regis
 
 import android.content.ContentValues.TAG
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.auth
 import com.google.firebase.auth.userProfileChangeRequest
-import com.jagaFakta.fact_check_android.R
 import com.jagaFakta.fact_check_android.databinding.ActivityRegisterBinding
 
 class RegisterActivity : AppCompatActivity() {
@@ -43,14 +39,13 @@ class RegisterActivity : AppCompatActivity() {
                     // Sign in success, update UI with the signed-in user's information
                     addUserName(nma)
                     Log.d(TAG, "createUserWithEmail:success")
-                    Toast.makeText(baseContext, "buat akun sukses", Toast.LENGTH_SHORT,).show()
+                    Toast.makeText(baseContext, "success", Toast.LENGTH_SHORT,).show()
                     auth.signOut()
                     finish()
-                    startActivity(Intent(this,RegisterActivity::class.java))
                 } else {
                     // If sign in fails, display a message to the user.
                     Log.w(TAG, "createUserWithEmail:failure", task.exception)
-                    Toast.makeText(baseContext, "Authentication failed.", Toast.LENGTH_SHORT,).show()
+                    Toast.makeText(baseContext, "Create accoun Failed.", Toast.LENGTH_SHORT,).show()
                 }
             }
     }

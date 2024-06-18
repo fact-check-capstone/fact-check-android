@@ -13,5 +13,12 @@ data class PredictResponse(
 data class Data(
 
 	@field:SerializedName("result")
-	val prediction: String
+	val prediction: String,
+
+	@field:SerializedName("text")
+	val text: String,
+
+	@field:SerializedName("createdAt")
+	val createdAt: String,
+
 )
