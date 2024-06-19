@@ -3,6 +3,7 @@ package com.jagaFakta.fact_check_android.ui.profile
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -48,9 +49,18 @@ class ProfileActivity : AppCompatActivity() {
 
         private fun btnLogout(){
         binding.btnLogout.setOnClickListener {
+            loading(true)
             auth.signOut()
             startActivity(Intent(this, MainActivity::class.java))
             finish()
+        }
+    }
+
+    private fun loading(lod:Boolean){
+        if (lod == true){
+            binding.ProgressBar.visibility = View.VISIBLE
+        }else{
+            binding.ProgressBar.visibility = View.GONE
         }
     }
 }

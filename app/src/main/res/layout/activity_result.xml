@@ -9,6 +9,7 @@
     tools:context=".ui.resultPredict.ResultActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
         android:layout_width="340dp"
         android:layout_height="490dp"
         android:layout_marginTop="50dp"
@@ -47,9 +48,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="Tidak terindikasi Hoax sadasd asdasd asdasd asdas d"
+            android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="8pt"
-            android:textAlignment="center"
             android:textStyle="normal"
             app:layout_constraintEnd_toEndOf="@+id/tvHasil"
             app:layout_constraintStart_toStartOf="@+id/tvHasil"
@@ -93,6 +94,19 @@
         app:layout_constraintStart_toStartOf="@+id/textView3"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
         tools:ignore="MissingConstraints" />
+
+    <ProgressBar
+        android:id="@+id/ProgressBar"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:visibility="visible" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

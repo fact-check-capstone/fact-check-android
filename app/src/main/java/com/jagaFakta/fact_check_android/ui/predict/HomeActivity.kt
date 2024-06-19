@@ -32,11 +32,6 @@ class HomeActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
     private lateinit var idUser:String
 
-//    companion object{
-//        data class data(
-//            val text:String
-//        )
-//    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -59,10 +54,12 @@ class HomeActivity : AppCompatActivity() {
         binging.btnScan.setOnClickListener { 
             val input = binging.textScan.text.toString()
             if (input.isNotEmpty()){
+                loading(true)
                 CoroutineScope(Dispatchers.IO).launch{
                     predict(input)
                 }
             }else{
+                loading(false)
                 Toast.makeText(this, "Please fill in the news you want to check for hoaxes!!", Toast.LENGTH_SHORT).show()
             }
         }
@@ -91,6 +88,9 @@ class HomeActivity : AppCompatActivity() {
                         intent.putExtras(bundle)
                         startActivity(intent)
                         finish()
+                        CoroutineScope(Dispatchers.Main).launch {
+                            loading(false)
+                        }
                     }
                 } else {
                     Log.e(TAG, "gagal: ${response.message()}")
@@ -102,6 +102,15 @@ class HomeActivity : AppCompatActivity() {
             }
 
         })
+    }
+
+    private fun loading(lod:Boolean){
+        if (lod == true){
+            binging.ProgressBar.visibility = View.VISIBLE
+            binging.btnScan.isEnabled = false
+        }else{
+            binging.ProgressBar.visibility = View.GONE
+        }
     }
 
 }

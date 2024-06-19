@@ -34,13 +34,12 @@ class ResultActivity : AppCompatActivity() {
         }
 
         binding.btnHps.setOnClickListener {
+            loading(true)
             CoroutineScope(Dispatchers.IO).launch {
                 val retrofit = ApiConfig.PredictService().Delete(idHistory!!)
                     CoroutineScope(Dispatchers.Main).launch {
                         Toast.makeText(this@ResultActivity, "${retrofit.status}", Toast.LENGTH_SHORT).show()
-//                        startActivity(Intent(this@ResultActivity,HistoryActivity::class.java))
                         finish()
-//                        finishActivity(11)
                     }
             }
         }
@@ -53,6 +52,14 @@ class ResultActivity : AppCompatActivity() {
         }else{
             binding.imgResult.setImageResource(R.drawable.icon_silang)
 
+        }
+    }
+
+    private fun loading(lod:Boolean){
+        if (lod == true){
+            binding.ProgressBar.visibility = View.VISIBLE
+        }else{
+            binding.ProgressBar.visibility = View.GONE
         }
     }
 }
